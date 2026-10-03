@@ -1,0 +1,173 @@
+@import 'tailwindcss';
+
+@layer base {
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@theme {
+  --breakpoint-xs: 22.5rem; /* 360px */
+  --breakpoint-sm: 30rem; /* 480px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 75rem; /* 1200px */
+}
+
+/* ===============> TYPOGRAPHY */
+
+@utility typo-h1-desktop {
+  font-family: var(--ff-base);
+  font-size: 2.75rem;
+  line-height: 1.3;
+  font-weight: 500;
+  text-transform: none;
+}
+
+@utility typo-h2-desktop {
+  font-family: var(--ff-base);
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+
+@utility typo-h3-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+
+@utility typo-h4-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+
+@utility typo-h5-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+
+@utility typo-h1-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 2.75rem;
+  line-height: 1.3;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@utility typo-h2-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@utility typo-h3-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@utility typo-h4-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@utility typo-h5-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@utility typo-body-desktop {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+@utility typo-body-lg-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+@utility typo-body-xl-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+@utility typo-body-caps {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@utility typo-body-highlight {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+@utility typo-body-italic {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@utility typo-body-mobile {
+  font-family: var(--ff-base);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  font-weight: 400;
+}
+@utility typo-body-mobile-bold {
+  font-family: var(--ff-base);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+@utility typo-body-mobile-italic {
+  font-family: var(--ff-base);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@utility typo-body-mobile-caps {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/*  TYPOGRAPHY <=============== */

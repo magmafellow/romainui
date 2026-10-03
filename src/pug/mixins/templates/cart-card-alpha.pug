@@ -1,0 +1,22 @@
+include ./stepper-beta
+include ./message-alpha
+include ../icons/close
+
+mixin cart-card-alpha(imgSrc, imgAlt, title, subtitle, total, isBorderBottom)
+  .cart-card-alpha(class=`${isBorderBottom ? 'cart-card-alpha_border-bottom' : ''}`)&attributes(attributes)
+    .cart-card-alpha__content-1
+      .cart-card-alpha__delete-box
+        button.cart-card-alpha__delete-btn
+          +close()
+          .flyer
+      .cart-card-alpha__img-wrapper
+        img(src=imgSrc, alt=imgAlt).cart-card-alpha__img
+
+      .cart-card-alpha__main
+        .cart-card-alpha__main-title.uppercase= title
+        .cart-card-alpha__main-subtitle= subtitle
+
+      .cart-card-alpha__tail
+        +stepper-beta('1')
+
+        .cart-card-alpha__tail-price.uppercase= total

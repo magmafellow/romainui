@@ -1,0 +1,86 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    link(rel="icon" href="/icons/favicon.svg")
+
+    link(rel="stylesheet" href="/css/main.css")
+
+    block libraries
+      //- GSAP (JS-based Animations)
+      //- script(src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js")
+      //- script(src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js")
+      //- script(src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js")
+      
+      //- Swiper (Carousel)
+      //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css")
+      //- script(src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js")
+      
+      //- Toastify (Toasts)
+      //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css")
+      //- script(src="https://cdn.jsdelivr.net/npm/toastify-js", defer="")
+
+      //- Vanilla Calendar Pro (Calendar)
+      //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/styles/index.css")
+      //- script(src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/index.js", defer="")
+
+      //- Choices-js (Select dropdown)
+      //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css")
+      //- script(src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js") 
+
+      //- Tippy (popovers, tooltips)
+      //- script(src="https://unpkg.com/@popperjs/core@2")
+      //- script(src="https://unpkg.com/tippy.js@6")
+    
+      //- Pristine (form validation)
+      //- script(src="/local/templates/otvet2026/js/libs/pristine.min.js")
+
+      //- NOUISlider (range slider)
+      //- script(src="/local/templates/otvet2026/js/libs/nouislider.min.js")
+      //- link(rel="stylesheet", href="/css/library/nouislider.min.css")
+
+      //- wnumb (number formatting)
+      //- script(src="/local/templates/otvet2026/js/libs/wnumb.min.js")
+
+      //- Choices-js (Select component)
+      //- script(src="https://cdn.jsdelivr.net/npm/choices.js@11.2.3/public/assets/scripts/choices.min.js") 
+      //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/choices.js@11.2.3/public/assets/styles/choices.min.css")
+
+      //- A11y Dialog (dialogs)
+      //- script(src="https://cdn.jsdelivr.net/npm/a11y-dialog@8/dist/a11y-dialog.min.js", defer="true") 
+
+      //- Imask (Input masks)
+      //- script(src="https://unpkg.com/imask") 
+
+      //- Fancybox
+      //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css")
+      //- script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js")
+
+      //- michu2k/Accordion (Accordion)
+      //- link(rel="stylesheet", href="https://unpkg.com/accordion-js@3.4.1/dist/accordion.min.css")
+      //- script(src="https://unpkg.com/accordion-js@3.4.1/dist/accordion.min.js")
+      
+    block script
+      script(src="/js/main.js" type="module")
+
+    block head
+      meta(name="description" content=pageDescription || siteDescription)
+      title= pageTitle || siteName
+
+  body(class=`typo-body-desktop header-space-reserver`, data-js-assistent="")
+    div(class="default-layout wrapper")
+      block header
+
+      block content
+
+      block site-notifier-block
+
+      block dialogs
+
+      block footer
+
+
+      .hidden.popovers-source
+        block popovers

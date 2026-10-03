@@ -1,0 +1,362 @@
+extends ../../layouts/base
+
+include ../../mixins/checkbox-alpha
+
+block content
+  main
+    .flex.flex-col.gap-10
+      div(class="container py-12 flex flex-col gap-20 mb-10 [&_a]:underline [&_a]:decoration-neutral-500 [&_a]:hover:text-neutral-700 [&_a]:underline-offset-2")
+        div
+          h2.typo-h2-desktop.mb-6 Основные страницы
+          ul.flex.flex-col.gap-4
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/index.html") Главная страница
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/index-cookie-vpn.html") Главная страница (Cookie, VPN)
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/specialist-detailed.html") Специалист детальная
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/specialists-grid.html") Специалисты сетка
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/specialists-grid-choose-specialist.html") Специалисты сетка | Выбор специалиста
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/specialists-grid-choose-date-time.html") Специалисты сетка | Выбор даты и времени
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/specialists-list.html") Специалисты список
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/shop.html") Магазин
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/electro-product.html") Электронный товар
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/physical-product.html") Физический товар
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/contacts.html") Контакты
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/faq.html") FAQ
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/certificate-begin.html") Сертификат (Начальная страница)
+                p.text-sm.text-neutral-500 
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/certificate-choose.html") Сертификат (Оформление)
+                p.text-sm.text-neutral-500 
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/certificate-success.html") Сертификат (Успешное приобритение)
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/personal-cabinet.html") Личный кабинет (Нет записей и нет товаров и пустая история)
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/personal-cabinet-all.html") Личный кабинет (Есть записи и есть товары и заполненная история)
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/cart.html") Корзина
+                p.text-sm.text-neutral-500 
+
+            li.pl-8.flex.flex-col.gap-4
+              div.flex.items-start.gap-2
+                span.mt-1.text-green-600.text-sm [done]
+                div.flex.flex-col.gap-2
+                  div
+                    a(href="/cart-register-order.html") Корзина | Оформление заказа
+                  p.text-sm.text-neutral-500 
+
+            li.pl-8.flex.flex-col.gap-4
+              div.flex.items-start.gap-2
+                span.mt-1.text-green-600.text-sm [done]
+                div.flex.flex-col.gap-2
+                  div
+                    a(href="/cart-fast-register-order.html") Корзина | Быстрое оформление заказа
+                  p.text-sm.text-neutral-500
+
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/success-payment-delivery.html") Успешная оплата | Доставка
+                p.text-sm.text-neutral-500 
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/success-payment-pickup.html") Успешная оплата | Самовывоз
+                p.text-sm.text-neutral-500 
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/success-payment-only-electro.html") Успешная оплата | Только электронные товары | Быстрый заказ
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/page-not-found.html") Страница 404
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  div Политика конфиденциальности
+                p.text-sm.text-neutral-500 
+            li.pl-8.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/privacy-policy.html") 1) Политика обеспечения конфиденциальности
+                p.text-sm.text-neutral-500
+            li.pl-8.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/oferta.html") 2) Оферта
+                p.text-sm.text-neutral-500 
+            li.pl-8.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/user-agreement.html") 3) Пользовательское соглашение
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/about.html") О сайте (About)
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/personal-cabinet-login.html") Вход в Личный кабинет
+                p.text-sm.text-neutral-500 
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/personal-cabinet-registration.html") Регистрация | Личный кабинет
+                p.text-sm.text-neutral-500 
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/personal-cabinet-registration-user-registered.html") Регистрация | Личный кабинет (Пользователь уже зарегистрирован)
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  div Запись к специалисту
+                p.text-sm.text-neutral-500 
+            li.flex.items-start.gap-2.pl-8
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/booking-landing.html") Лендинг для выбора записи
+                p.text-sm.text-neutral-500
+            li.flex.items-start.gap-2.pl-8
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/booking-demo.html") Запись на демо-сессию
+                p.text-sm.text-neutral-500
+            li.flex.items-start.gap-2.pl-8
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/booking.html") Запись на консультацию обобщенный вид формы оформления записи
+                p.text-sm.text-neutral-500
+            li.flex.items-start.gap-2.pl-8
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/booking-registered.html") Запись на консультацию | Зарегистрированный
+                p.text-sm.text-neutral-500
+            li.flex.items-start.gap-2.pl-8
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/booking-not-registered.html") Запись на консультацию | Незарегистрированный
+                p.text-sm.text-neutral-500
+            li.flex.items-start.gap-2.pl-8
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  div Успешная запись
+                p.text-sm.text-neutral-500
+            li.flex.items-start.gap-2.pl-16
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/booking-success-sessions.html") Успешная запись | Сессии
+                p.text-sm.text-neutral-500
+            li.flex.items-start.gap-2.pl-16
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/booking-success-offline.html") Успешная запись | Очно
+                p.text-sm.text-neutral-500
+            li.flex.items-start.gap-2.pl-16
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/booking-success-online.html") Успешная запись | Онлайн
+                p.text-sm.text-neutral-500
+
+        div
+          h2.typo-h2-desktop.mb-6 Страницы разработки
+          ul.flex.flex-col.gap-4
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/dev/libraries.html") Libraries/Packages
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/dev/typography.html") Typography
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-400.text-sm [pre-done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/dev/ui-kit.html") UI-kit
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-400.text-sm [pre-done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/dev/ui-kit-features.html") UI-kit features
+                p.text-sm.text-neutral-500
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-400.text-sm [pre-done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/dev/ui-kit-features-2.html") UI-kit features 2
+                p.text-sm.text-neutral-500 
+
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/dev/ui-kit-features-assistent.html") UI-kit Assistent
+                p.text-sm.text-neutral-500 Компоненты, связанные с Ассистентом "Ответ"
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/dev/dialog-demo.html") Dialog Demo (Примеры использования диалогов)
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/dialog-politics.html") Диалоги для Политики конфеденциальности, оферты, пользовательского соглашения
+                p.text-sm.text-neutral-500 
+
+            li.flex.items-start.gap-2
+              span.mt-1.text-green-600.text-sm [done]
+              div.flex.flex-col.gap-2
+                div
+                  a(href="/lk-dialogs.html") Диалоги для личного кабинета
+                p.text-sm.text-neutral-500 
+
+        div.flex.gap-4.items-center.hidden
+          span.mt-1.text-zinc-600.text-sm [not-started]
+          span.mt-1.text-amber-600.text-sm [in-progress]
+          span.mt-1.text-red-600.text-sm [stopped]
+          span.mt-1.text-green-600.text-sm [done]

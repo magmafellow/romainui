@@ -1,0 +1,40 @@
+include ./chip
+
+mixin card-specialist-alpha(fullName, price, position, img, alt, chips, nextAvailableSession, buttons, additionalInfo)
+  .card-specialist-alpha(class!=attributes.class)
+    .card-specialist-alpha__image-wrapper
+      img(src=img, alt=alt).card-specialist-alpha__image
+    
+    if fullName && position && price
+      .card-specialist-alpha__topbar
+        .card-specialist-alpha__namebox
+          h4.card-specialist-alpha__fullname(class="")= fullName
+          .card-specialist-alpha__position.italic= position
+        .card-specialist-alpha__price(class="")= price
+
+    if chips
+      .card-specialist-alpha__chips-wrapper
+        .card-specialist-alpha__chips
+          each val in chips
+            +chip('div', val, 'neutral')
+    
+    if additionalInfo
+      .card-specialist-alpha__additional-info
+        each addInfoItem in additionalInfo
+          .card-specialist-alpha__additional-info-box
+            .card-specialist-alpha__additional-info-label= addInfoItem.label
+            .card-specialist-alpha__additional-info-value(class=`${addInfoItem.isHighlight ? 'card-specialist-alpha__additional-info-value_highlight' : ''}`)= addInfoItem.value
+
+    .card-specialist-alpha__nextavailablebox
+      .card-specialist-alpha__nextavailablebox-label Ближайшее свободное время
+      .card-specialist-alpha__nextavailablebox-value= nextAvailableSession
+
+    .card-specialist-alpha__action-wrapper
+      if buttons === 'book'
+        button.btn.btn_primary-transitive.btn_md.card-specialist-alpha__action Записаться
+      else if buttons === 'demo'
+        button.btn.btn_secondary-transitive.btn_md.card-specialist-alpha__action Демо-сессия
+
+      else if buttons === 'book_demo'
+        button.btn.btn_primary-transitive.btn_md.card-specialist-alpha__action Записаться
+        button.btn.btn_secondary-transitive.btn_md.card-specialist-alpha__action Демо-сессия

@@ -1,0 +1,80 @@
+include ./chip
+
+mixin card-specialist-beta_old(fullName, price, position, img, alt, chips, nextAvailableSession, buttons, additionalInfo)
+  .card-specialist-beta(class!=attributes.class)
+    .card-specialist-beta__image-wrapper
+      img(src=img, alt=alt).card-specialist-beta__image
+    
+    .card-specialist-beta__middle
+      .card-specialist-beta__topbar
+        .card-specialist-beta__namebox
+          h4.card-specialist-beta__fullname.typo-h4-desktop= fullName
+          .card-specialist-beta__position.italic= position
+    
+      .card-specialist-beta__chips
+        each val in chips
+          +chip('div', val, 'neutral')
+    
+      if additionalInfo
+        .card-specialist-beta__additional-info
+          each addInfoItem in additionalInfo
+            .card-specialist-beta__additional-info-box
+              .card-specialist-beta__additional-info-label= addInfoItem.label
+              .card-specialist-beta__additional-info-value= addInfoItem.value
+
+      .card-specialist-beta__nextavailablebox
+        .card-specialist-beta__nextavailablebox-label Ближайшее свободное время
+        .card-specialist-beta__nextavailablebox-value= nextAvailableSession
+
+
+
+    .card-specialist-beta__tail.hidden-mobile
+      .card-specialist-beta__price.typo-h4-desktop= price
+      .card-specialist-beta__action-wrapper
+        if buttons === 'book'
+          button(class="").btn.btn_primary-transitive.btn_md.card-specialist-beta__action Записаться
+        else if buttons === 'demo'
+          button(class="").btn.btn_secondary-transitive.btn_md.card-specialist-beta__action Демо-сессия
+
+        else if buttons === 'book_demo'
+          button(class="").btn.btn_secondary-transitive.btn_md.card-specialist-beta__action Демо-сессия
+          button(class="").btn.btn_primary-transitive.btn_md.card-specialist-beta__action Записаться
+
+
+mixin card-specialist-beta(fullName, price, position, img, alt, chips, nextAvailableSession, buttons, additionalInfo)
+  .card-specialist-beta(class!=attributes.class)
+    .card-specialist-beta__image-wrapper
+      img(src=img, alt=alt).card-specialist-beta__image
+    
+    .card-specialist-beta__middle
+      .card-specialist-beta__topbar
+        .card-specialist-beta__namebox
+          h4.card-specialist-beta__fullname= fullName
+          .card-specialist-beta__position.italic= position
+        .card-specialist-beta__price= price
+        
+      .card-specialist-beta__chips
+        each val in chips
+          +chip('div', val, 'neutral')
+    
+      if additionalInfo
+        .card-specialist-beta__additional-info
+          each addInfoItem in additionalInfo
+            .card-specialist-beta__additional-info-box
+              .card-specialist-beta__additional-info-label= addInfoItem.label
+              .card-specialist-beta__additional-info-value= addInfoItem.value
+
+      .card-specialist-beta__bottom-wrapper
+        .card-specialist-beta__nextavailablebox
+          .card-specialist-beta__nextavailablebox-label Ближайшее свободное время
+          .card-specialist-beta__nextavailablebox-value= nextAvailableSession
+
+        .card-specialist-beta__action-wrapper
+          if buttons === 'book'
+            button(class="").btn.btn_primary-transitive.btn_md.card-specialist-beta__action Записаться
+          else if buttons === 'demo'
+            button(class="").btn.btn_secondary-transitive.btn_md.card-specialist-beta__action Демо-сессия
+
+          else if buttons === 'book_demo'
+            button(class="").btn.btn_secondary-transitive.btn_md.card-specialist-beta__action Демо-сессия
+            button(class="").btn.btn_primary-transitive.btn_md.card-specialist-beta__action Записаться

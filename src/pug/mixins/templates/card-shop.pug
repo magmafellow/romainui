@@ -1,0 +1,21 @@
+include ./stepper-alpha
+
+mixin card-shop(title, price, img, alt, description_01, description_02, isStepper=false)
+  .card-shop(class=attributes.class)
+    .card-shop__img-wrapper
+      img(src=img, alt=alt).card-shop__img
+
+    .card-shop__topbar
+      .card-shop__title= title
+      .card-shop__price= price
+
+    .card-shop__bottombar
+      .flex.flex-col.gap-1
+        .card-shop__description-01= description_01
+        .card-shop__description-02= description_02
+    
+      .card-shop__button-wrapper(class=`${isStepper ? 'hidden' : ''}`)
+        button.card-shop__action.btn.btn_primary-transitive.btn_sm В корзину
+        button(class="hidden!").card-shop__action.btn.btn_primary-transitive.btn_sm В корзине
+      .card-shop__stepper-wrapper(class=`${isStepper ? '' : 'hidden'}`)
+        +stepper-alpha()

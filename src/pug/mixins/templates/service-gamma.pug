@@ -1,0 +1,9 @@
+mixin service-gamma(img, alt='Alt for picture', body, link)
+    
+  .section-podcasts-otvet__service.service-gamma
+    if link
+      a(href=link).service-gamma__link
+
+    img(src=img, alt=alt).service-gamma__img
+    .service-gamma__label= body
+

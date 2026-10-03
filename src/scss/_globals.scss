@@ -1,0 +1,15 @@
+@use 'helpers' as *;
+
+html.scroll-lock {
+  overflow-y: hidden;
+}
+html.scroll-lock body {
+  overflow-y: hidden;
+}
+
+body {
+  // -webkit-font-smoothing: subpixel-antialiased;
+  // -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased; // Сделать текст тоньше
+  -moz-osx-font-smoothing: grayscale; // Сделать текст тоньше
+}

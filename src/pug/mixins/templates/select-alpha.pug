@@ -1,0 +1,22 @@
+mixin select-alpha(buttonAttributes={}, selectAttributes={}, options)
+  - const defaultOptions = [{label: 'Moscow', value: 'moscow'}, {label: 'Penza', value: 'penza'}]
+  //- If want component disabled - add .disabled or [aria-disabled] on [data-js-select-alpha] element
+  .select-alpha.select-alpha_size-sm(data-js-select-alpha)&attributes(attributes)
+    select.select-alpha__original-select(data-js-select-alpha-original-select, tabindex="-1")&attributes(selectAttributes)
+      //- option(value="") Выберите 
+      //- option(value="mercedes") Mercedes
+      //- option(value="bugatti") Bugatti
+      //- option(value="mclaren") McLaren
+      each option in options
+        option(value=option.value)= option.label
+
+    button.select-alpha__button(data-js-select-alpha-button, type="button")&attributes(buttonAttributes)
+      span(data-js-select-alpha-button-text)
+      +angle-down()(class="select-alpha__angle-icon")
+    .select-alpha__body(data-js-select-alpha-body)
+      //- .select-alpha__option(data-js-select-alpha-option) Выберите
+      //- .select-alpha__option(data-js-select-alpha-option) Mercedes
+      //- .select-alpha__option(data-js-select-alpha-option) Bugatti
+      //- .select-alpha__option(data-js-select-alpha-option) McLaren
+      each option in options
+       .select-alpha__option(data-js-select-alpha-option)= option.label

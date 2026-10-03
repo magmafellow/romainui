@@ -1,0 +1,18 @@
+include ../icons/breadcrumbs-delimiter
+include ../icons/back-breadcrumbs
+
+mixin breadcrumbs(items=[])
+  - var itemsLength = items.length
+  .breadcrumbs
+    each item, index in items
+      .breadcrumbs__item
+        a(href="#").breadcrumbs__link= item
+        if itemsLength - 1 !== index
+          +breadcrumbs-delimiter()(class="breadcrumbs__delimiter")
+
+mixin breadcrumbs-back(body='Назад')
+  .breadcrumbs
+    .breadcrumbs__item
+      a(href="#").breadcrumbs__link
+        +back-breadcrumbs 
+        | #{body}

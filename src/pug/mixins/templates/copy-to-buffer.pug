@@ -1,0 +1,6 @@
+include ../icons/copy-buffer
+
+mixin copy-to-buffer(body)
+  .copy-to-buffer(data-js-copy-to-buffer=body)
+    +copy-buffer()(class="copy-to-buffer__icon")
+    .flyer

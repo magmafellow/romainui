@@ -1,0 +1,80 @@
+extends ../../layouts/base
+
+
+
+block content
+  main.container.py-12
+    div.flex.flex-col.gap-10
+      div.flex.flex-col.gap-10
+        .typo-h2-desktop.uppercase.text-green-500 Headings
+        div.flex.flex-col.gap-6
+          div.typo-h1-desktop H1 title
+          div.typo-h2-desktop H2 title
+          div.typo-h3-desktop H3 title
+          div.typo-h4-desktop H4 title
+          div.typo-h5-desktop H5 title
+        div.flex.flex-col.gap-6
+          div.typo-h1-desktop-uppercase H1 title (only uppercase)
+          div.typo-h2-desktop-uppercase H2 title (only uppercase)
+          div.typo-h3-desktop-uppercase H3 title (only uppercase)
+          div.typo-h4-desktop-uppercase H4 title (only uppercase)
+          div.typo-h5-desktop-uppercase H5 title (only uppercase)
+
+      div.flex.flex-col.gap-10
+        div.typo-h2-desktop.uppercase.text-green-500 Body text
+        div.dev-info
+          | Классы для текста представлены <b>tailwind утилитами</b>. Это значит, что помимо просто использования таких классов (typo-body-caps, typo-body-desktop, typo-h1-desktop) их можно комбинировать с брейкпоинтами (xs: md: lg: xl:) и сразу в HTML разметке задавать стиль тексту динамически.
+          br
+          br
+          | #{`<div class="typo-body-mobile-caps md:typo-h3-desktop lg:typo-h2-desktop">Title</div>`}
+          br
+          br
+          | В этом примере. У заголовка сначала будет начертание мобильное (маленькое) капсом, затем на планшете начертание заголовка h3, а на пк и ноутбуках начертание заголовка h2
+          br
+          br
+          | <b>Вторым способом</b> для указания шрифта используюся SCSS-миксины - более привычный способ, для тех, кто знаком только с CSS. SCSS-миксины после транслитерации превращаются в обычный CSS, как и весь SCSS. Для большей информации смотрите исходный код.
+
+        div.flex.flex-col.gap-20
+          div.flex.flex-col.gap-6
+            p(class="typo-body-caps") typo-body-caps
+            p(class="typo-body-caps") Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Запятых семь буквенных текст сбить, образ живет имеет которое правилами?
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-desktop") typo-body-desktop
+            p(class="typo-body-desktop") Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Осталось моей живет пор lorem дороге предупреждал точках имеет однажды!
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-highlight") typo-body-highlight
+            p(class="typo-body-highlight") Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Свой, силуэт первую запятой собрал дороге от всех предупредила гор инициал!
+
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-italic") typo-body-italic
+            p(class="typo-body-italic") Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Ведущими что единственное рукописи раз вопрос. Маленькая снова великий дороге!
+
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-lg-desktop") typo-body-lg-desktop
+            p(class="typo-body-lg-desktop") Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Власти по всей даль вскоре букв ведущими он дорогу курсивных за!
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-xl-desktop") typo-body-xl-desktop
+            p(class="typo-body-xl-desktop") Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. По всей своих выйти дорогу если, моей ipsum все текстов необходимыми?
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-mobile") typo-body-mobile
+            p(class="typo-body-mobile") Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты. Свой его деревни страна последний реторический ему предложения большой вдали.
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-mobile-bold") typo-body-mobile-bold
+            p(class="typo-body-mobile-bold") Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Вскоре меня он семь назад снова. Раз вопроса подпоясал своих.
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-mobile-caps") typo-body-mobile-caps
+            p(class="typo-body-mobile-caps") Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Пояс инициал предложения семантика по всей за безопасную приставка, продолжил ipsum.
+
+          div.flex.flex-col.gap-6
+            p(class="typo-body-mobile-italic") typo-body-mobile-italic
+            p(class="typo-body-mobile-italic") Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Точках образ страна встретил заголовок назад которой сих запятых то.
+
+block dialogs

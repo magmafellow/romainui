@@ -1,0 +1,16 @@
+include ../icons/minus-input
+include ../icons/plus-input
+
+
+mixin stepper-beta(defaultValue='1')
+  .stepper-beta(data-js-stepper-alpha="", data-js-stepper-alpha-default-value=defaultValue)
+    button.stepper-beta__btn.stepper-beta__btn-minus(data-js-stepper-alpha-btn="", data-js-stepper-alpha-btn-minus="")
+      +minus-input
+      .flyer.flyer_size-natural-sm.flyer_border-sm
+
+    input.stepper-beta__input(hidden="true", data-js-stepper-alpha-input="")
+    .stepper-beta__value-wrapper
+      .stepper-beta__value(data-js-stepper-alpha-value="")= defaultValue
+    button.stepper-beta__btn.stepper-beta__btn-plus(data-js-stepper-alpha-btn="", data-js-stepper-alpha-btn-plus="")
+      +plus-input
+      .flyer.flyer_size-natural-sm.flyer_border-sm

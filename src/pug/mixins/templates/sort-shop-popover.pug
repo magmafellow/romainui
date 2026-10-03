@@ -1,0 +1,16 @@
+include ../icons/angle-down
+
+mixin sort-shop-popover-trigger(title="Цена по возрастанию")
+  button.sort-specialists-popover-trigger&attributes(attributes)
+    .sort-specialists-popover-trigger__title= title
+    +angle-down()()
+
+
+mixin sort-shop-popover-content(isFirstSelected)
+  .sort-specialists-popover-content&attributes(attributes)
+    a(href="#", class=`${isFirstSelected ? 'sort-specialists-popover-item_selected' : ''}`).sort-specialists-popover-item По умолчанию
+    a(href="#").sort-specialists-popover-item По популярности
+    a(href="#").sort-specialists-popover-item Цена по возрастанию
+    a(href="#").sort-specialists-popover-item Цена по убыванию
+    a(href="#").sort-specialists-popover-item Сначала новые
+    a(href="#").sort-specialists-popover-item По названию А-Я

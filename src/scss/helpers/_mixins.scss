@@ -1,0 +1,136 @@
+@use 'sass:math';
+@use 'functions' as *;
+@use 'media' as *;
+@use 'mixins-typography' as *;
+
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: fluid($max, $min);
+}
+
+@mixin outline {
+  outline-offset: 2px;
+  outline: 2px solid var(--color-blc-primary-3quarter);
+}
+
+@mixin line-clamp($num) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+}
+
+@mixin outline-invalid {
+  outline-offset: 2px;
+  outline: 2px solid var(--color-destructive-3quarter);
+}
+
+@mixin button-link-secondary {
+  display: inline-flex;
+  gap: rem(10);
+  align-items: center;
+  color: var(--color-gray-secondary);
+  text-underline-offset: rem(2);
+  @include typo-body-mobile;
+  @include mobile-s-above {
+    @include typo-body-desktop;
+  }
+
+  @include hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin absolute-stretch() {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+@mixin abs-x {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+
+@mixin abs-y {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin link {
+  transition-duration: var(--tr-dur);
+
+  @include hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@mixin full-vw-centered-line(
+  $property: top,
+  $left: 50%,
+  $right: auto,
+  $translate: -50%
+) {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: $left;
+    right: $right;
+    #{$property}: 0;
+    translate: $translate;
+    width: var(--100vw);
+    height: rem(1);
+    background-color: var(--color-dark-15);
+  }
+}

@@ -1,0 +1,159 @@
+@use 'sass:math';
+@use 'functions' as *;
+@use 'media' as *;
+
+@mixin typo-h1-desktop {
+  font-family: var(--ff-base);
+  font-size: 2.75rem;
+  line-height: 1.3;
+  font-weight: 500;
+  text-transform: none;
+}
+@mixin typo-h1-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 2.75rem;
+  line-height: 1.3;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@mixin typo-h2-desktop {
+  font-family: var(--ff-base);
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+@mixin typo-h2-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin typo-h3-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+@mixin typo-h3-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin typo-h4-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+@mixin typo-h4-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@mixin typo-h5-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+@mixin typo-h5-desktop-uppercase {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin typo-body-desktop {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin typo-body-lg-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin typo-body-xl-desktop {
+  font-family: var(--ff-base);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin typo-body-caps {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin typo-body-highlight {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+
+@mixin typo-body-italic {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: none;
+}
+
+@mixin typo-body-mobile {
+  font-family: var(--ff-base);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin typo-body-mobile-bold {
+  font-family: var(--ff-base);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: none;
+}
+
+@mixin typo-body-mobile-italic {
+  font-family: var(--ff-base);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: none;
+}
+
+@mixin typo-body-mobile-caps {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  text-transform: uppercase;
+}

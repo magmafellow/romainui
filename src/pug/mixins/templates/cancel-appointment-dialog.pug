@@ -1,0 +1,55 @@
+include ../mixins/avatar-cabinet
+
+include ../icons/close
+
+mixin dialog-cancel-appointment
+  div#dialog-cancel-appointment.dialog-alpha.dialog-cancel-appointment(
+    aria-hidden="true"
+    data-a11y-dialog="dialog-cancel-appointment-id"
+    data-js-dialog-alpha=""
+  )
+    div.dialog-alpha__overlay(data-js-dialog-alpha-overlay="", onclick="window.__closeA11yDialog('#dialog-cancel-appointment')")
+
+    div.dialog-alpha__content.w-full.dialog-cancel-appointment__content(role="document")
+      button.dialog-alpha__close-btn(type="button", data-js-dialog-alpha-close-btn="")
+        +close()
+        .flyer.flyer_size-natural
+
+      .dialog-alpha__content-inner.dialog-cancel-appointment__content-inner
+
+        .dialog-alpha__body.dialog-cancel-appointment__body
+          .dialog-cancel-appointment__title(class="typo-body-caps md:typo-h4-desktop-uppercase")
+            | Вы действительно хотите
+            br 
+            | отменить запись?
+
+          - const additionalInfoArray = [{label: 'Формат', value: 'Очно в Москве'}, {label: 'Адрес', value: 'ул. Тверская, 12, кабинет 12'}, {label: 'Длительность', value: '50 мин'}]
+          .abonement-alpha.abonement-alpha_no-border.abonement-alpha_no-padding
+            .abonement-alpha__specialist
+              +avatar-cabinet-img('/images/specialists/spec_01.webp', 'Specialist 01')
+              .abonement-alpha__specialist-info-box
+                .abonement-alpha__specialist-fullname Татьяна Данилова
+                .abonement-alpha__specialist-position Психолог, психотерапевт
+
+            .abonement-alpha__additional-info
+              each additionalInfo in additionalInfoArray
+                .abonement-alpha__additional-info-box
+                  .abonement-alpha__additional-info-label= additionalInfo.label
+                  .abonement-alpha__additional-info-value= additionalInfo.value
+          
+            .abonement-alpha__nearest()
+              .abonement-alpha__nearest-label Ближайшая дата и время
+              .abonement-alpha__nearest-value 2 июня 2026, 11:00 (мск)
+
+
+          .dialog-cancel-appointment__cta
+            button.btn.btn_md.btn_secondary-transitive.w-full(onclick="document.querySelector('#dialog-cancel-appointment').classList.toggle('is-cancelled-open', true)") Отменить запись
+
+        .dialog-alpha__body.dialog-cancel-appointment__body-appointment-cancelled
+          div.dialog-cancel-appointment__cancelled-topbar
+            .dialog-cancel-appointment__title-cancelled(class="typo-body-caps md:typo-h4-desktop-uppercase") Запись отменена
+            p Денежные средства поступят на вашу карту в течение 5 рабочих дней.
+          
+          .dialog-cancel-appointment__cancelled-cta
+            a(href="#").btn.btn_md.btn_secondary-transitive На главную страницу
+            a(href="#").btn.btn_md.btn_primary-transitive В личный кабинет

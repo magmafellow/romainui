@@ -1,0 +1,9 @@
+mixin chip(type = 'button', body, style)
+  //- style: 'neutral' | 'success'
+  if type === 'div'
+    .chip(class=`chip_${style}`)= body
+  else if type === 'button'
+    button.chip(class=`chip_${style}`)= body
+  else
+    div Be careful! It is wrong (chip.pug)
+  

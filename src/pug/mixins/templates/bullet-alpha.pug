@@ -1,0 +1,8 @@
+mixin bullet-alpha(forHtml, id, name, size="md", type="radio")
+  label.bullet-alpha(for=forHtml, class=`bullet-alpha_size-${size} ${attributes.class}`)
+    input.bullet-alpha__input(type=type, name=name, id=id)&attributes(attributes)
+    .bullet-alpha__mirror
+      .bullet-alpha__mirror-checked
+        .bullet-alpha__mirror-checked-circle
+
+      .bullet-alpha__mirror-unchecked

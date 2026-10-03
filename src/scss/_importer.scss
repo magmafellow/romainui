@@ -1,0 +1,19 @@
+// tailwind already makes normalization/reset of CSS
+@use 'reset';
+@use 'fonts';
+@use 'globals';
+@use 'variables';
+@use 'utils';
+
+// *** blocks base ***
+@use 'blocks/base/btn';
+
+
+// *** blocks feature ***
+
+
+// *** sections ***
+@use 'sections/hero';
+@use 'sections/letter-to-vera';
+@use 'sections/consultations';
+@use 'sections/our-specialists';

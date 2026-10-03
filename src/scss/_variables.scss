@@ -1,0 +1,16 @@
+@use 'helpers' as *;
+
+:root {
+  --font-family-base: 'Inter', sans-serif;
+  --ff-base: var(--font-family-base);
+
+  --font-accent: 'Helvetica', sans-serif;
+  --ff-accent: var(--font-accent);
+
+  --transition-duration: 0.2s;
+  --tr-dur: var(--transition-duration);
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+}

@@ -1,0 +1,9 @@
+include ../icons/checkmark
+
+mixin checkbox-alpha(forHtml, id, name, size="md", type="checkbox")
+  label.checkbox-alpha(for=forHtml, class=`checkbox-alpha_size-${size} ${attributes.class}`)
+    input.checkbox-alpha__input(type=type, name=name, id=id, checked=attributes.checked)&attributes(attributes)
+    .checkbox-alpha__mirror
+      .checkbox-alpha__mirror-checked
+        +checkmark
+      .checkbox-alpha__mirror-unchecked
